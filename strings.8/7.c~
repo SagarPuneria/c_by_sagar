@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	char str[]="why...?but;not?oh!,where when";
+	char sep[]="?!;,. \t";
+	char *t;
+	t=strtok(str,sep);
+	printf("%d\n",t);
+	printf("%[^\0]s\n",t);
+	while(t!=NULL)
+	{
+		printf("%s ",t);
+		t=strtok(NULL,sep);
+	}
+	return 0;
+}
